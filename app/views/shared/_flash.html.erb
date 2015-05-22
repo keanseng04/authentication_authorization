@@ -1,0 +1,25 @@
+<div class="container" id="flash_messages">
+  <%- if flash[:success] %>
+    <div class="alert alert-success">
+      <button class="close" data-dismiss="alert" type="button"> &times;
+        <%= flash[:success] %>
+      </button>
+    </div> 
+  <%- if flash[:notice] %>
+    <div class="alert alert-info">
+      <button class="close" data-dismiss="alert" type="button"> &times;
+      <%= flash[:notice] %>
+      </button>
+  <%- if flash[:alert] %>
+    <div class="alert alert-warning">
+      <button class="close" data-dismiss="alert" type="button"> &times;
+        <%= flash[:alert] %>
+      </button>
+    </div> 
+  <%- if flash[:error] %>
+    <div class="alert alert-danger" >
+      <button class="close" data-dismiss="alert" type="button"> &times;
+        <%= flash[:error] %>
+      </button>
+    </div>
+</div>
