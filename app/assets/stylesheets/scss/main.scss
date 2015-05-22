@@ -1,37 +1,36 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import "compass";
 
-// Base styles
-@import "base/grids";
-@import "base/helpers";
-@import "base/mixins";
-@import "base/reset";
-@import "base/spaces";
-@import "base/variables";
-@import "base/colors";
+// // Base styles
+// @import "base/grids";
+// @import "base/helpers";
+// @import "base/mixins";
+// @import "base/reset";
+// @import "base/spaces";
+// @import "base/variables";
+// @import "base/colors";
 
-// Shared
-@import "shared/*";
+// // Shared
+// @import "shared/*";
 
-//Fonts
-@import "main/typography";
+// //Fonts
+// @import "main/typography";
 
-// Layout specific styles
-@import "main/layout";
+// // Layout specific styles
+// @import "main/layout";
 
-//Overwrite some of bootstrap's stuff
-@import "main/overwrite";
+// //Overwrite some of bootstrap's stuff
+// @import "main/overwrite";
 
-// Objects or components
-@import "main/components/buttons";
-@import "main/components/inputs";
+// // Objects or components
+// @import "main/components/buttons";
+// @import "main/components/inputs";
 
-// Responsive
-@import "main/responsive/mobile";
-@import "main/responsive/tablet";
-@import "main/responsive/desktop";
+// // Responsive
+// @import "main/responsive/mobile";
+// @import "main/responsive/tablet";
+// @import "main/responsive/desktop";
 
-// Views or static pages
-@import "main/views/**/*"
+// // Views or static pages
+// @import "main/views/**/*"

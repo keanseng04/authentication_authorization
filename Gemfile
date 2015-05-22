@@ -2,8 +2,14 @@ source 'https://rubygems.org'
 
 ruby '2.2.2'
 
+#Bug with font-awesome, sprockets-rails v2.2.4 fixes this
+gem 'sprockets-rails', require: 'sprockets/railtie'
 gem 'rails', '4.2.1'
+gem 'rspec-rails'
+gem 'slim'
+gem 'slim-rails'
 gem 'pg'
+gem 'font-awesome-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'autoprefixer-rails'
 gem 'sass-rails', '~> 5.0'
