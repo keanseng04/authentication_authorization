@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>AuthorizationAuthentication</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  </head>
 
-<%= yield %>
 
-</body>
+  <body class="#{controller_name}-#{action_name}">
+    <%= render partial: "layouts/header", locals: { view: "#{controller_name} #{action_name}" } %>
+    <%= render 'shared/flash' %>
+    <%= yield %>
+
+  </body>
 </html>
