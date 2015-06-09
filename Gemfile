@@ -18,7 +18,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'responders'
-gem 'rails_admin'
 gem 'searchkick'
 gem 'better_errors'
 
