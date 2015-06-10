@@ -20,6 +20,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'responders'
 gem 'searchkick'
 gem 'better_errors'
+gem 'sucker_punch', '~> 1.0'
 
 #Payment
 gem "braintree"
