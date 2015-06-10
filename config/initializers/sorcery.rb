@@ -37,13 +37,13 @@ Rails.application.config.sorcery.configure do |config|
   # How long in seconds to keep the session alive.
   # Default: `3600`
   #
-  # config.session_timeout =
+  config.session_timeout = 600
 
 
   # Use the last action as the beginning of session timeout.
   # Default: `false`
   #
-  # config.session_timeout_from_last_action =
+  config.session_timeout_from_last_action = true
 
 
   # -- http_basic_auth --
@@ -76,7 +76,7 @@ Rails.application.config.sorcery.configure do |config|
   # What providers are supported by this app, i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce] .
   # Default: `[]`
   #
-  # config.external_providers =
+  config.external_providers = [:facebook]
 
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
@@ -85,6 +85,16 @@ Rails.application.config.sorcery.configure do |config|
   #
   # config.ca_file =
 
+  config.facebook.key = ENV["FACEBOOK_APP_KEY"]
+  config.facebook.secret = ENV["FACEBOOK_APP_SECRET"]
+  config.facebook.user_info_mapping = { email: "email", username: "first_name", first_name: "first_name", last_name: "last_name" }
+  config.facebook.scope = "public_profile, email"
+
+  if Rails.env.staging? || Rails.env.development?
+    config.facebook.callback_url = "http://localhost:3000/oauth/callback?provider=facebook"
+  else Rails.env.production?
+    config.facebook.callback_url = "http://www.project-mod.com/oauth/callback?provider=facebook"
+  end
 
   # For information about LinkedIn API:
   # - user info fields go to https://developer.linkedin.com/documents/profile-fields
@@ -282,7 +292,7 @@ Rails.application.config.sorcery.configure do |config|
     # your mailer class. Required.
     # Default: `nil`
     #
-    # user.user_activation_mailer =
+    # user.user_activation_mailer = 
 
 
     # when true sorcery will not automatically
@@ -333,7 +343,7 @@ Rails.application.config.sorcery.configure do |config|
     # mailer class. Needed.
     # Default: `nil`
     #
-    # user.reset_password_mailer =
+    user.reset_password_mailer = UserMailer
 
 
     # reset password email method on your mailer class.
@@ -359,7 +369,7 @@ Rails.application.config.sorcery.configure do |config|
     # hammering protection, how long in seconds to wait before allowing another email to be sent.
     # Default: `5 * 60`
     #
-    # user.reset_password_time_between_emails =
+    user.reset_password_time_between_emails = 0
 
 
     # -- brute_force_protection --
@@ -436,7 +446,7 @@ Rails.application.config.sorcery.configure do |config|
     # Class which holds the various external provider data for this user.
     # Default: `nil`
     #
-    # user.authentications_class =
+    user.authentications_class = Authentication
 
 
     # User's identifier in authentications class.
