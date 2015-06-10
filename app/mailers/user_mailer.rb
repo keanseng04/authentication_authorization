@@ -12,20 +12,6 @@ class UserMailer < ActionMailer::Base
     mail to: user.email, subject: "Your password has been reset"
   end
 
-  def send_contact_form(name, email, subject, message)
-    @name = name
-    @email = email
-    @subject = subject
-    @message = message
-    mail to: "hello@mod.com", subject: "#{subject}", from: "mod_contact_form@mod.com"
-  end 
-
-  def email_password(user, password)
-    @user = user
-    @password = password
-    mail to: user.email, subject: "[Important] Your Facebook account default password"
-  end
-
   def activation_needed_email(user)
     @user = user
     @url  = activate_user_url(user.activation_token)
