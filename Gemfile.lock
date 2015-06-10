@@ -98,8 +98,10 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    compass-rails (2.0.1)
+    compass-rails (2.0.4)
       compass (~> 1.0.0)
+      sass-rails (<= 5.0.1)
+      sprockets (< 2.13)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     database_cleaner (1.4.1)
@@ -179,7 +181,7 @@ GEM
       mime-types
       net-scp (~> 1.1)
       net-ssh (>= 2.1.3)
-    fog-ecloud (0.1.1)
+    fog-ecloud (0.1.2)
       fog-core
       fog-xml
     fog-google (0.0.5)
@@ -195,7 +197,7 @@ GEM
       fog-core (~> 1.27)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
-    fog-profitbricks (0.0.2)
+    fog-profitbricks (0.0.3)
       fog-core
       fog-xml
       nokogiri
@@ -264,6 +266,7 @@ GEM
       heroku-api (>= 0.1.2)
       json
       rake
+    hike (1.2.3)
     hitimes (1.2.2)
     http (0.6.4)
       http_parser.rb (~> 0.6.0)
@@ -416,7 +419,7 @@ GEM
     rubyzip (1.1.7)
     safe_yaml (1.0.4)
     sass (3.4.14)
-    sass-rails (5.0.3)
+    sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
       sprockets (>= 2.8, < 4.0)
@@ -458,8 +461,11 @@ GEM
       oauth (~> 0.4, >= 0.4.4)
       oauth2 (>= 0.8.0)
     spring (1.3.6)
-    sprockets (3.2.0)
+    sprockets (2.12.3)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
       rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
     sprockets-rails (2.3.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
