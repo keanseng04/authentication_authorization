@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   # ==============================================================================================
   # Resources
   # ==============================================================================================
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create] do
+    get :activate, on: :member
+  end
   resources :password_resets, only: [:new, :create, :edit, :update]
 
 end
