@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # ==============================================================================================
   # Resources
   # ==============================================================================================
-
   resources :users, only: [:new, :create]
+  resources :password_resets, only: [:new, :create, :edit, :update]
+
 end

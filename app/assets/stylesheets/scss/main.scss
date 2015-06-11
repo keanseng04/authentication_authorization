@@ -1,0 +1,14 @@
+@import "font-awesome";
+
+//Shared
+@import "shared/*";
+
+// //Layout specific styles
+@import "main/layout";
+
+// // Responsive
+@import "main/responsive/mobile";
+@import "main/responsive/tablet";
+
+// //Views or static pages
+@import "main/views/**/*"
