@@ -30,8 +30,6 @@ class OauthController < ApplicationController
     case provider
     when "facebook"
       save_facebook_info
-    when "google"
-      save_google_info
     end
   
     auto_login(@user)
@@ -44,10 +42,6 @@ class OauthController < ApplicationController
     Oauth::RetrieveFacebookUserInfo.new(@access_token.token, @user).save
   end
 
-  def save_google_info
-    set_access_token(@user)
-    Oauth::RetrieveGoogleUserInfo.new(@access_token.token, @user).save
-  end
 
   def set_access_token(user)
     auth = user.authentications.find_by(provider: params[:provider])

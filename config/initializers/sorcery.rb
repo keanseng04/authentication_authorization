@@ -89,6 +89,7 @@ Rails.application.config.sorcery.configure do |config|
   config.facebook.secret = ENV["FACEBOOK_APP_SECRET"]
   config.facebook.user_info_mapping = { email: "email", username: "first_name", first_name: "first_name", last_name: "last_name" }
   config.facebook.scope = "public_profile, email, user_birthday"
+  config.facebook.api_version = "v2.2"
 
   if Rails.env.staging? || Rails.env.development?
     config.facebook.callback_url = "http://localhost:3000/oauth/callback?provider=facebook"

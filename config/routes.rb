@@ -20,7 +20,14 @@ Rails.application.routes.draw do
   # ==============================================================================================
   # Sorcery/Omniauth
   # ==============================================================================================
-  post "oauth/callback" => "oauths#callback"
-  get "oauth/callback" => "oauths#callback" # for use with Github, Facebook
-  get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+  post "oauth/callback" => "oauth#callback"
+  get "oauth/callback" => "oauth#callback" # for use with Github, Facebook
+  get "oauth/:provider" => "oauth#oauth", :as => :auth_at_provider
+
+  # ==============================================================================================
+  # User Sessions/Login/Logout
+  # ==============================================================================================
+  resources :user_sessions, only: [:create]
+  get 'login', to: 'user_sessions#new', as: 'login'
+  post 'logout', to: 'user_sessions#destroy', as: 'logout'
 end

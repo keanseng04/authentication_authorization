@@ -55,6 +55,7 @@ group :development, :test do
   gem 'letter_opener'
   gem 'launchy'
   gem 'faker'
+  gem 'dotenv-rails'
 end
 
 group :development do
