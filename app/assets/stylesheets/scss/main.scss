@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "font-awesome";
 @import "bootstrap";
 @import "bootstrap-sprockets";
@@ -14,4 +15,41 @@
 // @import "main/responsive/tablet";
 
 // //Views or static pages
+=======
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+// // Base styles
+// @import "base/grids";
+// @import "base/helpers";
+// @import "base/mixins";
+// @import "base/reset";
+// @import "base/spaces";
+// @import "base/variables";
+// @import "base/colors";
+
+// // Shared
+// @import "shared/*";
+
+// //Fonts
+// @import "main/typography";
+
+// // Layout specific styles
+// @import "main/layout";
+
+// //Overwrite some of bootstrap's stuff
+// @import "main/overwrite";
+
+// // Objects or components
+// @import "main/components/buttons";
+// @import "main/components/inputs";
+
+// // Responsive
+// @import "main/responsive/mobile";
+// @import "main/responsive/tablet";
+// @import "main/responsive/desktop";
+
+// // Views or static pages
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 // @import "main/views/**/*"

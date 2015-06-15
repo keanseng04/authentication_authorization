@@ -6,7 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+<<<<<<< HEAD
 module ProjectMod
+=======
+module AuthorizationAuthentication
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

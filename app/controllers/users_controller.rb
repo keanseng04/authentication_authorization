@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
   skip_before_action :require_login
   
   def new
@@ -41,4 +42,7 @@ class UsersController < ApplicationController
       @auth[:uid] = ( (SecureRandom.random_number)*1234567890 + 1234567890 ).to_i 
     end while Authentication.exists?(uid: @auth[:uid])
   end
+=======
+  
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 end

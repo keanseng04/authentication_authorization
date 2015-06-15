@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.2'
 
+<<<<<<< HEAD
 gem 'rails', '4.2.1'
 gem 'slim-rails'
 gem 'jquery-rails'
@@ -24,6 +25,25 @@ gem 'sucker_punch', '~> 1.0'
 
 #Payment
 gem "braintree"
+=======
+#Bug with font-awesome, sprockets-rails v2.2.4 fixes this
+gem 'sprockets-rails', require: 'sprockets/railtie'
+gem 'rails', '4.2.1'
+gem 'rspec-rails'
+gem 'slim'
+gem 'slim-rails'
+gem 'pg'
+gem 'font-awesome-rails'
+gem 'bootstrap-sass', '~> 3.3.3'
+gem 'autoprefixer-rails'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.1.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 2.0'
+gem 'sdoc', '~> 0.4.0', group: :doc
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 
 #Authentication and authorisation
 gem 'sorcery'
@@ -34,6 +54,7 @@ gem 'fb_graph'
 gem 'twitter'
 gem 'google_plus'
 
+<<<<<<< HEAD
 #Mail Chimp API Wrapper
 gem 'gibbon', '0.4.6'
 
@@ -84,3 +105,11 @@ end
 group :production do 
   gem 'rails_12factor'
 end
+=======
+group :development, :test do
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+end
+
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad

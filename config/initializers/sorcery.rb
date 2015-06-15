@@ -2,7 +2,11 @@
 # The default is nothing which will include only core features (password encryption, login/logout).
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging, :external
+<<<<<<< HEAD
 Rails.application.config.sorcery.submodules = [:reset_password, :user_activation, :external, :session_timeout]
+=======
+Rails.application.config.sorcery.submodules = [:core, :remember_me, :reset_password]
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -37,13 +41,21 @@ Rails.application.config.sorcery.configure do |config|
   # How long in seconds to keep the session alive.
   # Default: `3600`
   #
+<<<<<<< HEAD
   config.session_timeout = 600
+=======
+  # config.session_timeout =
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 
 
   # Use the last action as the beginning of session timeout.
   # Default: `false`
   #
+<<<<<<< HEAD
   config.session_timeout_from_last_action = true
+=======
+  # config.session_timeout_from_last_action =
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 
 
   # -- http_basic_auth --
@@ -76,7 +88,11 @@ Rails.application.config.sorcery.configure do |config|
   # What providers are supported by this app, i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce] .
   # Default: `[]`
   #
+<<<<<<< HEAD
   config.external_providers = [:facebook]
+=======
+  # config.external_providers =
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
@@ -85,6 +101,7 @@ Rails.application.config.sorcery.configure do |config|
   #
   # config.ca_file =
 
+<<<<<<< HEAD
   config.facebook.key = ENV["FACEBOOK_APP_KEY"]
   config.facebook.secret = ENV["FACEBOOK_APP_SECRET"]
   config.facebook.user_info_mapping = { email: "email", username: "first_name", first_name: "first_name", last_name: "last_name" }
@@ -96,6 +113,8 @@ Rails.application.config.sorcery.configure do |config|
   else Rails.env.production?
     config.facebook.callback_url = "http://www.project-mod.com/oauth/callback?provider=facebook"
   end
+=======
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 
   # For information about LinkedIn API:
   # - user info fields go to https://developer.linkedin.com/documents/profile-fields
@@ -293,7 +312,11 @@ Rails.application.config.sorcery.configure do |config|
     # your mailer class. Required.
     # Default: `nil`
     #
+<<<<<<< HEAD
     user.user_activation_mailer = UserMailer
+=======
+    # user.user_activation_mailer =
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 
 
     # when true sorcery will not automatically
@@ -344,7 +367,11 @@ Rails.application.config.sorcery.configure do |config|
     # mailer class. Needed.
     # Default: `nil`
     #
+<<<<<<< HEAD
     user.reset_password_mailer = UserMailer
+=======
+    # user.reset_password_mailer =
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 
 
     # reset password email method on your mailer class.
@@ -370,7 +397,11 @@ Rails.application.config.sorcery.configure do |config|
     # hammering protection, how long in seconds to wait before allowing another email to be sent.
     # Default: `5 * 60`
     #
+<<<<<<< HEAD
     user.reset_password_time_between_emails = 0
+=======
+    # user.reset_password_time_between_emails =
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 
 
     # -- brute_force_protection --
@@ -447,7 +478,11 @@ Rails.application.config.sorcery.configure do |config|
     # Class which holds the various external provider data for this user.
     # Default: `nil`
     #
+<<<<<<< HEAD
     user.authentications_class = Authentication
+=======
+    # user.authentications_class =
+>>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
 
 
     # User's identifier in authentications class.
