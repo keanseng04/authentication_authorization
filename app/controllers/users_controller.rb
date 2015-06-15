@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if @user.save
       WelcomeEmailJob.new.async.perform(@user)
       auto_login(@user)
-      redirect_to my_account_path
+      redirect_to root_path
     else
       flash[:error] = @user.errors.full_messages
       redirect_to request.referrer

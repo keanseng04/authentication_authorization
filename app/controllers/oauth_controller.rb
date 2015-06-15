@@ -11,7 +11,7 @@ class OauthController < ApplicationController
     if @user = login_from(provider)
       set_access_token(@user)
       flash[:success] = "You're logged in from #{provider.titleize}!"
-      redirect_to my_account_path
+      redirect_to root_path
     else
       register_new_user(provider)
     end
@@ -34,7 +34,7 @@ class OauthController < ApplicationController
   
     auto_login(@user)
     flash[:notice] = "You've registered through #{provider.titleize}!"
-    redirect_to my_account_path
+    redirect_to root_path
   end
 
   def save_facebook_info
