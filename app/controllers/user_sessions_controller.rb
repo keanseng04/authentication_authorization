@@ -1,5 +1,4 @@
 class UserSessionsController < ApplicationController
-<<<<<<< HEAD
   before_action :require_login, only: [:destroy]
 
   def new
@@ -21,6 +20,5 @@ class UserSessionsController < ApplicationController
     flash[:success] = "Logged out"
     redirect_to login_path
   end
-=======
->>>>>>> 5127fe1c51071e2940b319cd12983cf6829c1aad
+
 end
